@@ -1,7 +1,8 @@
 // The scope of `random` is too loose 
-const random = Math.floor(Math.random() * 3);
 
 const getRandEvent = () => {
+    const random = Math.floor(Math.random() * 3);
+
   if (random === 0) {
     return 'Marathon';
   } else if (random === 1) {
@@ -27,24 +28,21 @@ const getTrainingDays = (event) => {
 
 // The scope of `name` is too tight 
 const logEvent = (name, event) => {
-  var name = 'Nala';
   console.log(`${name}'s event is: ${event}`);
 };
 
 const logTime = (name, days) => {
-  var name = 'Nala';
   console.log(`${name}'s time to train is: ${days} days`);
 };
 
 const event = getRandEvent();
 var days = getTrainingDays(event);
+const name = 'Nala';
 // Define a `name` variable. Use it as an argument after updating logEvent and logTime 
 
 
 logEvent(name, event);
 logTime(name, days);
-
-console.log();
 
 const event2 = getRandEvent();
 const days2 = getTrainingDays(event2);
